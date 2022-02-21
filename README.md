@@ -6,7 +6,9 @@ Files that were created while learning python.
 #### ALGORITHMS
 
 1.A*
+
 2.BFS
+
 3.Djikstra
 
 #### DATA_STRUCTURE
