@@ -1,4 +1,7 @@
 # Data-Structures
+
+<p align="left"> <a href="https://www.python.org" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="80" height="80"/> </a>
+  
 Files that were created while learning python.
 
 # LIST OF PROJECTS
