@@ -1,2 +1,21 @@
 # Data-Structures
-Data Structures in Python. Simple file to understand data structures in python
+
+<p align="left"> <a href="https://www.python.org" target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="80" height="80"/> </a>
+  
+Files that were created while learning python.
+
+# LIST OF PROJECTS
+
+#### ALGORITHMS
+
+1.A*
+
+2.BFS
+
+3.Djikstra
+
+#### DATA_STRUCTURE
+
+1.main- testing data structures: List, Tuple, Set, Dict
+
+#### OpenCV
