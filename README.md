@@ -16,6 +16,16 @@ Files that were created while learning python.
 
 #### DATA_STRUCTURE
 
-1.main- testing data structures: List, Tuple, Set, Dict
+1.main - testing data structures: List, Tuple, Set, Dict
 
 #### OpenCV
+
+1.Basic
+  
+2.Basic2
+  
+3.Filtering
+  
+4.geometric_transformation
+  
+5.Edge_detection
