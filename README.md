@@ -33,3 +33,5 @@ Files that were created while learning python.
 #### Kivy
 
 1.,2.,3.,4.,5.,6.,7.- Kivy Tutorial:https://www.youtube.com/watch?v=bMHK6NDVlCM&list=PLzMcBGfZo4-kSJVMyYeOQ8CXJ3z1k7gHn
+
+8.Quiz- Simple math quiz for kids
