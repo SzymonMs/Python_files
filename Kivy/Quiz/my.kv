@@ -1,0 +1,262 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+    ThirdWindow:
+    FourthdWindow:
+    FifthWindow:
+    SixthWindow:
+    SeventhWindow:
+    LossWindow:
+    WinWindow:
+<MainWindow>:
+    name:"Start_Quiz"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                font_size:30
+                text: "ROZPOCZNIJ QUIZ PRZYCISKIEM START"
+        Button:
+            background_color:0,0,1,1
+            color:0.3,0.6,0.7,1
+            font_size:40
+            text: "START"
+            on_release:
+                app.root.current="Q1"
+                root.manager.transition.direction="left"
+<LossWindow>:
+    name:"Loss"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                color:1,0,0,1
+                font_size:30
+                text: "PRZEGRAŁEŚ, ZAGRAJ JESZCZE RAZ"
+        Button:
+            color:1,0,0,0.25
+            background_color:1,0,0,1
+            font_size:40
+            text: "JESZCZE RAZ"
+            on_release:
+                app.root.current="Q1"
+                root.manager.transition.direction="up"
+<WinWindow>:
+    name:"Win"
+    GridLayout:
+        cols:1
+        GridLayout:
+            cols:2
+            Label:
+                color:0,1,0,1
+                font_size:30
+                text: "WYGRAŁEŚ, ZAGRAJ JESZCZE RAZ"
+        Button:
+            color:0,1,0,0.25
+            background_color:0,1,0,1
+            font_size:40
+            text: "JESZCZE RAZ"
+            on_release:
+                app.root.current="Q1"
+                root.manager.transition.direction="left"
+<SecondWindow>:
+    name:"Q1"
+    GridLayout:
+        cols:1
+        Label:
+            text:"2+6="
+            font_size:30
+        GridLayout:
+            cols:4
+            Button:
+                background_color:0,1,1,1
+                text: "8"
+                on_release:
+                    app.root.current="Q3"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "7"
+                background_color:0,1,1,0.75
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "9"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "10"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+
+<ThirdWindow>:
+    name:"Q3"
+    GridLayout:
+        cols:1
+        Label:
+            font_size:30
+            text:"11+9="
+        GridLayout:
+            cols:4
+            Button:
+                text: "19"
+                background_color:0,1,1,1
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "20"
+                background_color:0,1,1,0.75
+                on_release:
+                    app.root.current="Q4"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "21"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "22"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+<FourthdWindow>:
+    name:"Q4"
+    GridLayout:
+        cols:1
+        Label:
+            text:"27-8="
+            font_size:30
+        GridLayout:
+            cols:4
+            Button:
+                background_color:0,1,1,1
+                text: "19"
+                on_release:
+                    app.root.current="Q5"
+                    root.manager.transition.direction="up"
+            Button:
+                background_color:0,1,1,0.75
+                text: "20"
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "10"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "18"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+<FifthWindow>:
+    name:"Q5"
+    GridLayout:
+        cols:1
+        Label:
+            text:"Jaki jest 8 miesiąc w roku? "
+            font_size:30
+        GridLayout:
+            cols:4
+            Button:
+                text: "Lipiec"
+                background_color:0,1,1,1
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "Sierpień"
+                background_color:0,1,1,0.75
+                on_release:
+                    app.root.current="Q6"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "Wrzesień"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "Maj"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+<SixthWindow>:
+    name:"Q6"
+    GridLayout:
+        cols:1
+        Label:
+            text:"Ile tygodni ma rok"
+            font_size:30
+        GridLayout:
+            cols:4
+            Button:
+                text: "50"
+                background_color:0,1,1,1
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "63"
+                background_color:0,1,1,0.75
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "7"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "52"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Q7"
+                    root.manager.transition.direction="up"
+<SeventhWindow>:
+    name:"Q7"
+    GridLayout:
+        cols:1
+        Label:
+            text:"18-12"
+            font_size:30
+        GridLayout:
+            cols:4
+            Button:
+                text: "5"
+                background_color:0,1,1,1
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "10"
+                background_color:0,1,1,0.75
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "6"
+                background_color:0,1,1,0.5
+                on_release:
+                    app.root.current="Win"
+                    root.manager.transition.direction="up"
+            Button:
+                text: "9"
+                background_color:0,1,1,0.25
+                on_release:
+                    app.root.current="Loss"
+                    root.manager.transition.direction="up"
