@@ -37,12 +37,29 @@ Tp = 0.1 #s
 t_sim = 3600 #s
 N = int(t_sim/Tp)+1 #ile kroków symulacji
 h = [0.0,]
+h_set = [3.21,]
 t = [0.0,]
 Qd = [0.05,] #zmienna sterująca, dopływ
+Qdmin = 0.0
+Qdmax = 0.1
 Qo = [beta*sqrt(h[-1])] #zakłócenie, odpływ
+Kp = 5;
+Ti = 50;
+errorSum = 0.0
+prevError = 0.0
+prevInt = 0.0
 for n in range(1,N):
     t.append(n*Tp)
-    Qd.append(Qd[-1])
+    h_set.append(h_set[-1])
+    #### PI CONTROLLER ####
+    error = h_set[-1] - min(max(Tp*(Qd[-1]-Qo[-1])/A+h[-1],h_min),h_max)
+    errorSum = error + prevError + prevInt
+    prevError = error
+    prevInt = errorSum
+    u = error*Kp + errorSum * Tp/(2.0*Ti)
+    Qd.append(min(max(u,Qdmin),Qdmax))
+
+    #Qd.append(Qd[-1])
     h.append(min(max(Tp*(Qd[-1]-Qo[-1])/A+h[-1],h_min),h_max)) #czy to wyliczone h mieści się między h_min a h_max
     #h.append(Tp*(Qd[-1]-Qo[-1])/A+h[-1])
     Qo.append(beta*sqrt(h[-1]))
@@ -50,13 +67,13 @@ print(h[-10:])
 print(Qd[-1],Qo[-1]) #jeżeli te dwie wartości są równe to jest stan ustalony bo Adh/dt=Qd-Qo to stan ustalony Qd=Qo
 # Pierwszy układ współrzędnych h(t) a drugi Qd(t) i Qo(t)
 
-
 PyplotPlot()
 
 fig = px.Figure()
 fig2 = px.Figure()
 
-PrintPlot(fig,t,h,'wysokość','Wysokość','t[s]','h[m]')
+PrintPlot(fig,t,h,'wysokość','Wysokość','t[s]','h[m]',print = False)
+PrintPlot(fig,t,h_set,'wartość zadana','Wysokość','t[s]','h[m]')
 PrintPlot(fig2,t,Qo,'odpływ','Odpływ i dopływ','t[s]','Qo[m^3/s]',print=False)
 PrintPlot(fig2,t,Qd,'dopływ','Odpływ i dopływ','t[s]','Qo[m^3/s]')
 
