@@ -14,6 +14,12 @@ Files that were created while learning python.
 
 3.Djikstra
 
+4.Pascal's triangle
+
+ <p align="center">
+<img width="416" height="312" src="https://github.com/SzymonMs/Python_files/blob/main/Algorithms/1.png">
+
+
 #### DATA_STRUCTURE
 
 1.main - testing data structures: List, Tuple, Set, Dict
