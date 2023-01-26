@@ -14,7 +14,7 @@ Files that were created while learning python.
 
 3.Djikstra
 
-4.Pascal's triangle
+4.Pascal's triangle -> Pascal Triangle and Sierpiński Triangle
 
  <p align="center">
 <img width="416" height="312" src="https://github.com/SzymonMs/Python_files/blob/main/Algorithms/1.png">
