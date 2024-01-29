@@ -19,7 +19,8 @@ Files that were created while learning python.
  <p align="center">
 <img width="416" height="312" src="https://github.com/SzymonMs/Python_files/blob/main/Algorithms/1.png">
 
-
+5. HCA
+   
 #### DATA_STRUCTURE
 
 1.main - testing data structures: List, Tuple, Set, Dict
@@ -53,3 +54,7 @@ Files that were created while learning python.
 4.mieszanie_substancji
 
 5.nalewanie_do_zbiornika
+
+### Macierze
+
+1. main - matrix class implementation
